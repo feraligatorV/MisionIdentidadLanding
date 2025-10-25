@@ -1,0 +1,16 @@
+[build]
+  command = "pnpm run build:static"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"
+  PNPM_VERSION = "9"
+
+[context.production]
+  command = "pnpm run build:static"
+
+[context.deploy-preview]
+  command = "pnpm run build:static"
+
+[context.branch-deploy]
+  command = "pnpm run build:static"
